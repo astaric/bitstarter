@@ -17,6 +17,25 @@
         body {
           padding-top: 60px;
         }
+        .linediv-l {
+          border-right: 1px white solid;
+        }
+        .linediv-r {
+          border-left: 1px white solid;
+        }
+      }
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) {
+        .copy {
+          padding: 2.5% 10%;
+        }
+        .linediv-l {
+          border-bottom: 1px white solid;
+        }
+        .linediv-r {
+          border-top: 1px white solid;
+        }
       }
 
       /* All form factors */
@@ -46,14 +65,17 @@
       .order {
         padding: 2% 0%;
       }
-      .action {
+      .actions {
         background-color: #343434;
         padding:3% 0%;
       }
       .video, .thermometer, .order, .social {
         text-align: center;
       }
+      .statistics h3, .statistics p {
+        color: white;
       }
+      
       div.row {
         border: 1px solid;
       }
@@ -93,7 +115,7 @@
       </div>
       <div class="row-fluid subheading">
         <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- Special typography from Bootstrap for elad paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
           <p class="lead">One sentence description.</p>
         </div>
@@ -102,15 +124,28 @@
         <div class="span5 offset1 video">
           <img class="img-polaroid" src="http://placehold.it/480x300">
         </div>
-        <div class="span6">
-          <div class="thermometer">
-            Thermometer
-          </div>
-          <div class="order">
-            Order
-          </div>
-          <div class="social">
-            Social
+        <div class="span5 actions">
+          <div class="span8 offset2">
+            <div class="statistics">
+              <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries -->
+                <div class="linediv-l">
+                  <h3>1000</h3> <p>backers</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$6000</h3> <p>of $10,000</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                  <h3>10</h3> <p>days left</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
